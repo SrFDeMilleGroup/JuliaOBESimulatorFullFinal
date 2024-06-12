@@ -1,3 +1,6 @@
+**TO DO: Add 'moleculeOBERedWithRandPhase.jl','moleculeOBEBlueWithRandPhase.jl','silverBlueWithRandPhase.jl','goldBlueWithRandPhase.jl','goldRedWithRandPhase.jl' & various auxFunctions.jl, analysis.m, etc**
+
+
 # JuliaOBESimulatorFullFinal
 
 # NOTE regarding running these at home 
@@ -10,4 +13,3 @@ If you want to run these at home, you will almost certainly want to reduce the '
 
 Will run the OBE simulator for silver.  For this one, I only allowed two variables to be passed: the overall detuning (e.g., I've assumed you are detuning both lasers, one tuned to F=0 and one to F=1, with respect to the F'=1 state by the same amount) and the total intensity.  
 
-TO DO: Add 'moleculeOBERedWithRandPhase.jl','moleculeOBEBlueWithRandPhase.jl','silverBlueWithRandPhase.jl','goldBlueWithRandPhase.jl','goldRedWithRandPhase.jl' & various auxFunctions.jl, analysis.m, etc
