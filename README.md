@@ -11,5 +11,7 @@ If you want to run these at home, you will almost certainly want to reduce the '
 
 # silverBlueWithRandPhase.jl
 
-Will run the OBE simulator for silver.  For this one, I only allowed two variables to be passed: the overall detuning (e.g., I've assumed you are detuning both lasers, one tuned to F=0 and one to F=1, with respect to the F'=1 state by the same amount) and the total intensity.  
+Will run the OBE simulator for silver.  For this one, I allow three variables to be passed: the overall detuning (e.g., I've assumed you are detuning both lasers, one tuned to F=0 and one to F=1, with respect to the F'=1 state by the same amount), the total intensity, and the ratio of power addressing each hyperfine level R01 (R01=P_{F=0}/P_{F=1}).  The magnetic field is currently hardcoded to be 25 G/cm (clearly indicated in code: feel free to change this or else make it a user passable parameter like it is for the gold MOT).  Also, feel free to add a 'raman detuning' variable, or equivalent, to allow F=0 and F=1 to have different detunings with respect to F'=1.  
+
+This is currently set up to run a simulation of a blueMOT from 0.02 mm to 1.0 mm displacements, for a velocity range from -7.5 to 7.5 m/s.  Results will be output into files called 'forceVsSpeedDisplacment(insertDisplacment)MMSameDir.dat'.  Results include columns indicating speed, a(v), \delta a(v), a(r), \delta a(r), and population in each hyperfine manifold (for both ground and excited state).
 
