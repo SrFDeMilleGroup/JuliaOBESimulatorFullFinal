@@ -14,7 +14,7 @@ for detuning in ${detunings[@]}; do
   for s0 in ${s0s[@]}; do
     for R01 in ${R01s[@]}; do
       export JULIA_NUM_THREADS=20
-      julia silverSimForClusterWithRandPhase.jl $detuning $s0 $R01
+      julia silverBlueWithRandPhase.jl $detuning $s0 $R01
     done
   done
 done
