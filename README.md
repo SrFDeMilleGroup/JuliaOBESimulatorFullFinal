@@ -1,4 +1,4 @@
-**TO DO: Add 'moleculeOBERedWithRandPhase.jl','moleculeOBEBlueWithRandPhase.jl','goldBlueWithRandPhase.jl','goldRedWithRandPhase.jl' & various auxFunctions.jl, analysis.m, etc**
+**TO DO: Add 'moleculeOBERedWithRandPhase.jl','moleculeOBEBlueWithRandPhase.jl' & various auxFunctions.jl, analysis.m, etc**
 
 
 # JuliaOBESimulatorFullFinal
