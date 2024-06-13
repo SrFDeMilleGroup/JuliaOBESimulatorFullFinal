@@ -9,7 +9,7 @@ As written, these simulations are all assuming you are using the cluster.  If yo
 
 If you want to run these at home, you will almost certainly want to reduce the 'numTrialsPerValueSet' variable.  This will give wildly divergent results for cases where the phase is randomized, so I would only recommend running the 'no rand phase' versions of the code (set 'useRandPhase' to zero!)
 
-# silverBlueWithRandPhase.jl
+# silverBlueWithRandPhase.jl & testSilver.sbatch
 
 Will run the OBE simulator for silver.  For this one, I allow three variables to be passed: the overall detuning (e.g., I've assumed you are detuning both lasers, one tuned to F=0 and one to F=1, with respect to the F'=1 state by the same amount), the total intensity, and the ratio of power addressing each hyperfine level R01 (R01=P_{F=0}/P_{F=1}).  The magnetic field is currently hardcoded to be 25 G/cm (clearly indicated in code: feel free to change this or else make it a user passable parameter like it is for the gold MOT).  Also, feel free to add a 'raman detuning' variable, or equivalent, to allow F=0 and F=1 to have different detunings with respect to F'=1.  
 
