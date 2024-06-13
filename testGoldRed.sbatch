@@ -22,7 +22,7 @@ for detF1 in ${detF1s[@]}; do
       for s0F2 in ${s0F2s[@]}; do
         for bGrad in ${bGrads[@]}; do
           export JULIA_NUM_THREADS=20
-          julia goldSimForClusterWithRandPhase.jl $detF1 $s0F1 $detF2 $s0F2 $bGrad
+          julia goldRedWithRandPhase.jl $detF1 $s0F1 $detF2 $s0F2 $bGrad
         done
       done
     done
