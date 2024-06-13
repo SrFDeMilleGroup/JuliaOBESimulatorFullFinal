@@ -225,12 +225,12 @@ for l = 1:length(displacementsInMM)
             prob.p[2][2] = randVys[i]
             prob.p[2][3] = randVzs[i]
             for laserVar = 1:length(s0)
-                prob.p[3][laserVar,1] = rp[laserVar,1];
-                prob.p[3][laserVar,2] = rp[laserVar,2];
-                prob.p[3][laserVar,3] = rp[laserVar,3];
-                prob.p[3][laserVar,4] = rp[laserVar,4];
-                prob.p[3][laserVar,5] = rp[laserVar,5];
-                prob.p[3][laserVar,6] = rp[laserVar,6];
+                prob.p[3][laserVar,1] = rp[laserVar,1] .* useRandPhase;
+                prob.p[3][laserVar,2] = rp[laserVar,2] .* useRandPhase;
+                prob.p[3][laserVar,3] = rp[laserVar,3] .* useRandPhase;
+                prob.p[3][laserVar,4] = rp[laserVar,4] .* useRandPhase;
+                prob.p[3][laserVar,5] = rp[laserVar,5] .* useRandPhase;
+                prob.p[3][laserVar,6] = rp[laserVar,6] .* useRandPhase;
             end
             remake(prob)
         end
