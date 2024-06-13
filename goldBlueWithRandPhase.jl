@@ -8,6 +8,7 @@ s0F2 = ARGS[4];
 bGradToUse = ARGS[5];
 include("AuVariables.jl")
 include("auxFunctionsNewRandomizePhase.jl");
+useRandPhase = 1.0;#set to 0.0 if you don't want randomized laser phases.  Recommend 0.0 for home use (if you're just testing stuff...you will be 'directionally' correct most likely) and 1.0 for 'real' cluster simulations
 
 #2) User choices with respect to saving output files
 saveInRealUnits = 1;#if 1, save vel+accel in m/s, mm/ms^2.  If 0, save in normalized units (vel= v/(gam/k)), (force=1e-3*hbar*k*gam)
@@ -224,12 +225,12 @@ for l = 1:length(displacementsInMM)
             prob.p[2][2] = randVys[i]
             prob.p[2][3] = randVzs[i]
             for laserVar = 1:length(s0)
-                prob.p[3][laserVar,1] = rp[laserVar,1,i];
-                prob.p[3][laserVar,2] = rp[laserVar,2,i];
-                prob.p[3][laserVar,3] = rp[laserVar,3,i];
-                prob.p[3][laserVar,4] = rp[laserVar,4,i];
-                prob.p[3][laserVar,5] = rp[laserVar,5,i];
-                prob.p[3][laserVar,6] = rp[laserVar,6,i];
+                prob.p[3][laserVar,1] = rp[laserVar,1,i] .* useRandPhase;
+                prob.p[3][laserVar,2] = rp[laserVar,2,i] .* useRandPhase;
+                prob.p[3][laserVar,3] = rp[laserVar,3,i] .* useRandPhase;
+                prob.p[3][laserVar,4] = rp[laserVar,4,i] .* useRandPhase;
+                prob.p[3][laserVar,5] = rp[laserVar,5,i] .* useRandPhase;
+                prob.p[3][laserVar,6] = rp[laserVar,6,i] .* useRandPhase;
             end
             remake(prob)
         end
