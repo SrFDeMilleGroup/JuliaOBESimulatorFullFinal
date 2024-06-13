@@ -8,6 +8,7 @@ s0F2 = ARGS[4];
 bGradToUse = ARGS[5];
 include("AuVariables.jl")
 include("auxFunctionsNewRandomizePhase.jl");
+useRandPhase = 1.0;#set to 0.0 if you don't want randomized laser phases.  Recommend 0.0 for home use (if you're just testing stuff...you will be 'directionally' correct most likely) and 1.0 for 'real' cluster simulations
 
 #2) User choices with respect to saving output files
 saveInRealUnits = 1;#if 1, save vel+accel in m/s, mm/ms^2.  If 0, save in normalized units (vel= v/(gam/k)), (force=1e-3*hbar*k*gam)
