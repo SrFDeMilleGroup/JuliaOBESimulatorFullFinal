@@ -24,3 +24,31 @@ Runs OBE Simulator for gold red-MOT (see gold paper for details).  Currently set
 This is currently set up to run a simulation of a redMOT from 0.2 to 5 mm for velocities from 0 to 35 m/s.
 
 .sbatch file is used to submit the jobs
+
+# goldBlueWithRandPhase.jl & testGoldBlue.sbatch
+
+Runs OBE Simulator for gold blue-MOT (see gold paper for details).  Currently set up to allow 5 variables to be passed (same as red-MOT above). As above, I have chosen the 'correct' polarizations for restoring forces, but feel free to mess with them as well as the waist.  
+
+This is currently set up to run a simulation of a blue-MOT from 0.02 to 1 mm for velocities from 0 to 2 m/s.
+
+.sbatch file is used to submit the jobs
+
+# moleculeOBERedWithRandPhase.jl & testMolRed.sbatch (TO ADD LATER)
+
+# moleculeOBEBlueWithRandPhase.jl & testMolBlue.sbatch (TO ADD LATER)
+
+# auxFunctionsNewRandomizePhase.jl
+
+This stores a bunch of functions ('clebch-gordan term' calculator, b-field terms, forces, the actual density matrix evolution operator, etc.) that are used in the gold/silver simulation.
+
+# auxFunctionsNewRandomizePhaseMolecules.jl (TO ADD LATER)
+
+This stores a bunch of functions ('clebch-gordan term' calculator, b-field terms, forces, the actual density matrix evolution operator, etc.) that are used in the molecule simulation.  Slightly different from the atomic 'auxFunctions' above due to the incorporation of both 'A' and 'B' excited states as well as j mixing, etc.
+
+# various __Variables.jl (TO ADD LATER)
+
+This stores relevant variables (wavenumbers, linewidths, hyperfine energies, etc.) relevant to the atoms/molecules.
+
+# analysis__.m (TO ADD LATER)
+
+Used to analyze data from the simulation to produce a(v,z), a(v), a(z), etc. plots and also to solve for things like capture velocity, \sigma, temperature, etc.  Code is reasonably self-explanatory but feel free to message me if you have any questions.
